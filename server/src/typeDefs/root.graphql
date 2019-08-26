@@ -1,0 +1,22 @@
+# import * from './user.graphql'
+# import * from './order.graphql'
+# import * from './feedback.graphql'
+
+type Query {
+  me: User!
+  users: [User!]
+  orders(pageInfo: PageInfoInput): OrderPayload!
+}
+ 
+type Mutation {
+   login(data: LoginUserInput!): AuthPayload!
+   # createUser(data: CreateUserInput!): AuthPayload!
+   # deleteUser: Success!
+   # updateUser(data: UpdateUserInput!): Success!
+   createOrder(data: CreateOrderInput!): Order!
+   updateOrder(_id: ID!, data: UpdateOrderInput!, pageInfo: PageInfoInput): OrderPayload!
+
+   createFeedback(data: CreateFeedbackInput!): SourceCodeLink!
+}
+
+

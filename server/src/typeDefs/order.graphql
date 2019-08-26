@@ -1,0 +1,73 @@
+type Order {
+   _id: ID!
+   status: String!
+   name: String!
+   email: String!
+   phone: String!
+   address: String!
+   typeTour: String!
+   total: Float!
+   createdAt: String!
+   updatedAt: String!
+} 
+# returned orders schema
+type OrderPayload {
+   totalAmount: Float!
+   numberOfRecords: Int!
+   orders: [Order!]!
+}
+##
+input PageInfoInput {
+   where: OrderWhereInput 
+   page: Int
+   numberOfItemsPerPage: Int
+   orderBy: OrderOrderInput
+}
+
+input OrderWhereInput {
+   days: Int
+   typeTour: String
+   status: String
+   or: Or!
+}
+
+input Or {
+   _id: ID
+   name: String
+   email: String
+   phone: String
+   address: String
+}
+
+enum OrderOrderInput {
+   createdAt_DESC
+   updatedAt_DESC
+}
+
+# creating input
+input CreateOrderInput {
+   name: String!
+   email: String!
+   phone: String!
+   address: String!
+   typeTour: String!
+   total: Float!
+}
+
+# updating input
+input UpdateOrderInput {
+   status: String
+   name: String
+   email: String
+   phone: String
+   address: String
+   typeTour: String
+   total: Float
+}
+
+# input UpdateOrderInputPageInfo {
+
+# }
+
+
+

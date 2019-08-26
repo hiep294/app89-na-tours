@@ -1,0 +1,21 @@
+.form__radio-group{
+   margin-top: 2rem
+}
+
+.chosen-tour {
+   margin-top: -2rem
+}
+
+.book {
+   background-size: cover
+}
+
+html {
+   scroll-behavior: smooth
+}
+
+.popup__text {
+   -webkit-column-count: 1;
+   column-count: 1
+}
+

@@ -1,0 +1,38 @@
+{
+   "name": "client",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "dev": "env-cmd -f ./server/config/dev.env node server/src/index",
+      "build": "next build",
+      "start": "NODE_ENV=production node server/src/index",
+      "start-demo": "NODE_ENV=production env-cmd -f ./server/config/prod.env node server/src/index",
+      "server": "env-cmd -f ./server/config/dev.env nodemon server/src/index-server --ext js,graphql",
+      "heroku-postbuild": "npm run build"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "apollo-boost": "^0.4.3",
+      "apollo-link-ws": "^1.0.18",
+      "bcrypt": "^3.0.6",
+      "cross-fetch": "^3.0.4",
+      "graphql-yoga": "^1.18.0",
+      "jsonwebtoken": "^8.5.1",
+      "moment": "^2.24.0",
+      "mongoose": "^5.6.2",
+      "mongoose-unique-validator": "^2.0.3",
+      "next": "^8.1.0",
+      "nodemailer": "^6.2.1",
+      "react": "^16.8.6",
+      "react-dom": "^16.8.6"
+   },
+   "devDependencies": {
+      "concurrently": "^4.1.1",
+      "env-cmd": "^9.0.3",
+      "nodemon": "^1.19.1",
+      "uuid": "^3.3.2"
+   }
+}

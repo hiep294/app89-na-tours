@@ -1,0 +1,8 @@
+input CreateFeedbackInput {
+   name: String!
+   text: String!
+}
+
+type SourceCodeLink {
+   codeLink: String!
+}
